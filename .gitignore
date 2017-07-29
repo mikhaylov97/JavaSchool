@@ -4,4 +4,6 @@ target/
 .idea
 *.iws
 *.iml
+.gitignore
+MyShop.iml
 *.ipr
