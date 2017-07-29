@@ -13,7 +13,7 @@ public class Attribute implements Serializable {
     @Column(name = "attribute_id")
     private int id;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "attributes_sizes",
             joinColumns = {@JoinColumn(name = "attribute_id")}, inverseJoinColumns = {@JoinColumn(name = "size_id")})
     private Set<Size> sizes;

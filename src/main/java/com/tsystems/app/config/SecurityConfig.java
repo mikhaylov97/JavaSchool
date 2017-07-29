@@ -1,6 +1,5 @@
 package com.tsystems.app.config;
 
-import com.tsystems.app.service.impl.security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -25,11 +24,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(userDetailsService);
         //.passwordEncoder(getShaPasswordEncoder());
-    }
-
-    @Bean
-    public UserDetailsService getUserDetailsService() {
-        return new UserDetailsServiceImpl();
     }
 
     @Override
